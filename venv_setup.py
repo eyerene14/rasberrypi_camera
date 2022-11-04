@@ -3,9 +3,7 @@ import os
 os.listdir()
 
 
-name = 'venv'
-name = (input('What is the name of the virtual environment?')
-        if name == '' else name)
+name = input('What is the name of the virtual environment?')
 # print(name)
 
 
@@ -14,8 +12,9 @@ def createVirtualEnvironment():
     os.system('ls -la')
 
 
-def activateVirtualEnvironment():
+def activateVirtualEnvironment(name='raspi'):
     os.system('. ' + name + '/bin/activate')
+    #print(os.system('. ' + name + '/bin/activate'))
 
 
 def importPackagesToVenv():
@@ -34,4 +33,5 @@ if os.path.exists(name):
     activateVirtualEnvironment()
 else:
     createVirtualEnvironment()
+
 # stopVirtualEnvironment()
