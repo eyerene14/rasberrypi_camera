@@ -21,4 +21,5 @@ def moveFilesToRaspy(fromPath='pwd', fileName='', toPath='~'):
     print(os.system('ls -l'))
 
 
+print(os.path)
 connectToRaspy()
